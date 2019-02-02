@@ -66,6 +66,18 @@ class UIKeyboardViewController: UIViewController {
 -  with `UIKeyboardDelegate`:
 
 ```swift
+class UIKeyboardViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Add delegate to default UIViewController keyboard property
+        self.keyboard.delegate = self
+
+    }
+
+}
+
 extension UIKeyboardViewController: UIKeyboardDelegate {
 
     func keyboardWillShow(with info: UIKeyboard.Info) {
